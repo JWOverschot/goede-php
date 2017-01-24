@@ -1,0 +1,23 @@
+body {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #322205;
+	color: white;
+	text-align: center;
+	font-family: 'Press Start 2P', cursive;
+}
+
+h1, p {
+	position: fixed;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+h1 {
+	top: 40%;
+}
+
+p {
+	top: 50%;
+	font-size: 200%;
+}
