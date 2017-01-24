@@ -12,12 +12,12 @@
 	<script type="text/javascript">
 		setInterval( function(){
 			$("#reload").load(location.href + "#reload");
-		}, 10000);
+		}, 1000);
 	</script>
 	<div id="reload">
 		<?php
 		date_default_timezone_set("Europe/Amsterdam");
-		$time = date("h:i");
+		$time = date("H:i");
 		if ($time >= "06:00" && $time < "12:00") {
 			echo "<h1>GOEDE MORGEN!</h1>";
 			echo "<style type='text/css'>body {background-image: url(backgrounds/morning.png);}</style>";
