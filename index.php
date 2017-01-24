@@ -30,7 +30,7 @@
 			echo "<h1>GOEDE MIDDAG!</h1>";
 			echo "<style type='text/css'>body {background-image: url(backgrounds/afternoon.png);}</style>";
 		}
-		elseif ($time >= "18:00" && $time < "00:00") {
+		elseif ($time >= "18:00") {
 			echo "<h1>GOEDE AVOND!</h1>";
 			echo "<style type='text/css'>body {background-image: url(backgrounds/evening.png);}</style>";
 		}
