@@ -10,14 +10,18 @@
 </head>
 <body>
 	<script type="text/javascript">
-		setInterval( function(){
-			$("#reload").load(location.href + "#reload");
-		}, 1000);
+		var timeout = setTimeout(reload, 1000);
+		function reload(){
+			$("#reload").load("index.php #reload", function(){
+				$(this).unwrap();
+				timeout = setTimeout(reload, 1000);
+			});
+		}
 	</script>
 	<div id="reload">
 		<?php
 		date_default_timezone_set("Europe/Amsterdam");
-		$time = date("H:i");
+		$time = date("H:i:s");
 		if ($time >= "06:00" && $time < "12:00") {
 			echo "<h1>GOEDE MORGEN!</h1>";
 			echo "<style type='text/css'>body {background-image: url(backgrounds/morning.png);}</style>";
