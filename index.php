@@ -13,7 +13,6 @@
 		var timeout = setTimeout(reload, 1000);
 		function reload(){
 			$("#reload").load("index.php #reload", function(){
-				$(this).unwrap();
 				timeout = setTimeout(reload, 1000);
 			});
 		}
